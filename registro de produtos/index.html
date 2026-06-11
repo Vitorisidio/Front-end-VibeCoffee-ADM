@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Vibe Coffee - Cadastro</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <img src="./img/logo.png" alt="Vibe Coffee Logo" class="logo">
+    </header>
+
+    <main class="container-principal">
+        <form class="card-cadastro">
+
+            <div class="area-upload">
+                <div class="placeholder-imagem">
+                    <div class="icone-camera">📷</div>
+                </div>
+                <button type="button" class="btn-upload">
+                    <span>➔</span>
+                </button>
+            </div>
+
+            <div class="campos-formulario">
+
+                <input type="text" placeholder="Nome do Produto" class="input-padrao">
+
+                <textarea placeholder="Descrição" class="input-padrao textarea-descricao"></textarea>
+
+                <div class="linha-dupla">
+                    <div class="select-wrapper">
+                        <select class="input-padrao">
+                            <option value="" disabled selected>Categoria</option>
+                            <option value="cafes">Cafés</option>
+                            <option value="doces">Doces</option>
+                        </select>
+                    </div>
+                    <input type="text" placeholder="Preço" class="input-padrao input-preco">
+                </div>
+
+                <div class="botoes-acao">
+                    <a href="../visualizacao_de_produtos/index.html">
+                        <button type="button" class="btn-voltar">voltar</button>
+                    </a>
+                    <button type="submit" class="btn-salvar">Salvar</button>
+                </div>
+
+            </div>
+
+        </form>
+    </main>
+
+</body>
+
+</html>
