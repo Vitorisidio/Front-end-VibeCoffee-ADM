@@ -1,0 +1,55 @@
+/* Importa a fonte Inter do Google Fonts para ser utilizada em todo o projeto */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/* Remove margens e espaçamentos padrão do navegador e ajusta o cálculo das dimensões */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Define a altura mínima da página e a cor de fundo */
+body {
+    min-height: 100vh;
+    background-color: rgb(250, 250, 250);
+    overflow-x: hidden;
+}
+
+.sideBar {
+    background-color: #E9E3FF;
+    width: 16.25vw;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+
+}
+
+
+
+.containerNavegacao {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
+
+.btnNavegação {
+
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+    width: 15.1vw;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #755CD2;
+    margin-top: 62px;
+}

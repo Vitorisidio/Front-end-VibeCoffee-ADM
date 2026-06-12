@@ -128,3 +128,9 @@ tipo.addEventListener('change', criarCamposPreco)
 
 // Preview da imagem
 inputImagem.addEventListener('change', previewImagem)
+
+
+
+
+
+
