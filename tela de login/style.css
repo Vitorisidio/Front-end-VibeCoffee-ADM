@@ -1,0 +1,112 @@
+/* Importa a fonte Inter do Google Fonts para ser utilizada  */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/* Remove margens e espaçamentos padrão do navegador */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Configuração geral da página */
+body {
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+    background-color: #DCD6F7;
+}
+
+/* Container principal */
+main {
+    width: 100vw;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card de login */
+.cardLogin {
+
+    width: 700px;
+    height: 380px;
+
+    background-color: #F5F5F5;
+
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 40px;
+}
+
+/* Título */
+.cardLogin h1 {
+
+    font-size: 52px;
+    font-weight: 400;
+
+    margin-bottom: 40px;
+}
+
+/* Formulário */
+.cardLogin form {
+
+    width: 75%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Campos de entrada */
+.cardLogin input {
+
+    width: 100%;
+    height: 45px;
+
+    border: 1.5px solid #755CD2;
+    border-radius: 12px;
+
+    padding-left: 15px;
+
+    font-size: 16px;
+
+    outline: none;
+}
+
+/* Área do botão */
+.areaBotao {
+
+    display: flex;
+    justify-content: center;
+
+    margin-top: 10px;
+}
+
+/* Botão entrar */
+.btnEntrar {
+
+    width: 110px;
+    height: 45px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: #5D3AF1;
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+/* Efeito hover do botão */
+.btnEntrar:hover {
+
+    transform: scale(1.05);
+
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, .2);
+}
