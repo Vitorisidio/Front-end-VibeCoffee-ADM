@@ -2,57 +2,149 @@
 <html lang="pt-br">
 
 <head>
+    <!-- Configuração de caracteres e responsividade -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+
+    <!-- Título da aba do navegador -->
     <title>Vibe Coffee - Cadastro</title>
+
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JS com módulos e carregamento após HTML -->
+    <script src="app.js" defer></script>
 </head>
 
 <body>
 
+    <!-- =====================================================
+         HEADER (topo do site)
+         Contém apenas o logo da aplicação
+    ====================================================== -->
     <header class="header">
-        <img src="./img/logo.png" alt="Vibe Coffee Logo" class="logo">
+        <img src="./img/logo.png" alt="Logo do sistema Vibe Coffee" class="logo">
     </header>
 
+    <!-- =====================================================
+         CONTEÚDO PRINCIPAL CENTRALIZADO
+         Aqui fica o formulário de cadastro
+    ====================================================== -->
     <main class="container-principal">
+
+        <!-- =================================================
+             CARD PRINCIPAL DO FORMULÁRIO
+             Dividido em duas colunas:
+             - Upload da imagem (esquerda)
+             - Campos do formulário (direita)
+        ================================================== -->
         <form class="card-cadastro">
 
+            <!-- ================================
+                 ÁREA DE UPLOAD DA IMAGEM
+                 Responsável pelo preview do produto
+            ================================= -->
             <div class="area-upload">
-                <div class="placeholder-imagem">
-                    <div class="icone-camera">📷</div>
-                </div>
-                <button type="button" class="btn-upload">
-                    <span>➔</span>
-                </button>
+
+                <!-- input escondido (não aparece na tela) -->
+                <input type="file" id="preview-input" accept="image/*" hidden>
+
+                <!-- label funciona como botão clicável do upload -->
+                <label for="preview-input" class="placeholder-imagem">
+
+                    <!-- ÍCONE/IMAGEM PADRÃO (antes de escolher arquivo) -->
+                    <img src="./img/Screenshot.png" class="placeholder-icon" alt="Ícone de upload">
+
+                    <!-- PREVIEW DA IMAGEM ESCOLHIDA PELO USUÁRIO -->
+                    <img id="preview-image" class="preview-img" alt="Preview da imagem selecionada">
+
+                </label>
             </div>
 
+            <!-- =================================================
+                 ÁREA DO FORMULÁRIO (lado direito)
+                 Aqui ficam todos os campos de dados
+            ================================================== -->
             <div class="campos-formulario">
 
-                <input type="text" placeholder="Nome do Produto" class="input-padrao">
+                <!-- Nome do produto -->
+                <input type="text" class="input-padrao" placeholder="Nome do Produto">
 
-                <textarea placeholder="Descrição" class="input-padrao textarea-descricao"></textarea>
+                <!-- Descrição do produto -->
+                <textarea class="input-padrao textarea-descricao" placeholder="Descrição"></textarea>
 
-                <div class="linha-dupla">
-                    <div class="select-wrapper">
-                        <select class="input-padrao">
-                            <option value="" disabled selected>Categoria</option>
-                            <option value="cafes">Cafés</option>
-                            <option value="doces">Doces</option>
-                        </select>
+                <!-- Seleção de categoria -->
+                <select id="categoria" class="input-padrao">
+
+                    <option value="" selected disabled>
+                        Categoria
+                    </option>
+
+                    <option value="cafes">
+                        Café
+                    </option>
+
+                    <option value="doces">
+                        Doce
+                    </option>
+
+                </select>
+
+                <!-- =================================================
+                     ÁREA DE TIPOS DE CAFÉ
+                     Só aparece quando categoria é selecionada
+                ================================================== -->
+                <div id="tipoCafe" class="tipo-cafe">
+
+                    <div id="tipo" class="input-padrao">
+
+                        <!-- tipo: quente -->
+                        <label>
+                            <input type="checkbox" value="Quente">
+                            Quente
+                        </label>
+
+                        <!-- tipo: gelado -->
+                        <label>
+                            <input type="checkbox" value="Gelado">
+                            Gelado
+                        </label>
+
+                        <!-- tipo: especial -->
+                        <label>
+                            <input type="checkbox" value="Especial">
+                            Especial
+                        </label>
+
                     </div>
-                    <input type="text" placeholder="Preço" class="input-padrao input-preco">
                 </div>
 
+                <!-- =================================================
+                     CAMPOS DE PREÇO DINÂMICOS
+                     Criados automaticamente via JavaScript
+                ================================================== -->
+                <div id="containerPrecos"></div>
+
+                <!-- =================================================
+                     BOTÕES DE AÇÃO DO FORMULÁRIO
+                ================================================== -->
                 <div class="botoes-acao">
-                    <a href="../visualizacao_de_produtos/index.html">
-                        <button type="button" class="btn-voltar">voltar</button>
-                    </a>
-                    <button type="submit" class="btn-salvar">Salvar</button>
+
+                    <!-- botão voltar (não envia form) -->
+                    <button type="button" class="btn-voltar">
+                        Voltar
+                    </button>
+
+                    <!-- botão salvar (envia form) -->
+                    <button type="submit" class="btn-salvar">
+                        Salvar
+                    </button>
+
                 </div>
 
             </div>
-
         </form>
+
     </main>
 
 </body>
